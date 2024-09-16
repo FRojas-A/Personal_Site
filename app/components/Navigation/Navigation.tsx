@@ -28,9 +28,11 @@ export default function Navigation() {
                     Contact me
                 </span>
             </Fragment>
-            : <Link href="/" className={nav.item}>
+            : <div>
+            {/* <Link href="/" className={nav.item} onClick={(e) => e.preventDefault()}>
                 Home
-            </Link>
+            </Link> */}
+            </div>
             }
             
         </div>
