@@ -1,0 +1,35 @@
+.container {
+    grid-column: 4 / 6;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    height: 100%;
+    width: 100%;
+
+}
+
+.title {
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
+}
+
+.linkedIn {
+    grid-column: 4 / 6;
+    grid-row: 2 / 3;
+    width: 192px;
+}
+
+.github {
+    grid-column: 4 / 6;
+    grid-row: 3 / 4;
+    width: 192px;   
+}
+
+.email {
+    grid-column: 4 / 6;
+    grid-row: 4 / 5;
+    width: 192px; 
+}

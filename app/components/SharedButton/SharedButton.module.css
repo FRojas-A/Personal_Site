@@ -1,18 +1,40 @@
 .container {
     display: flex;
+    border: solid white 3px;
+    border-radius: 10px;
 }
+
+.container:hover {
+    background-color: rgb(24, 24, 24);
+}
+
+@media (prefers-color-scheme: light) {
+    .container{
+        border-color: black;
+    }
+    
+    .container:hover {
+      background-color: #e3e3e3;
+    }
+  }
 
 .sm {
     display: flex;
     padding: 8px 16px;
+    width: 100%;
 }
 
 .md {
     display: flex;
     padding: 12px 24px;
+    width: 100%;
 }
 
 .lg {
     display: flex;
     padding: 20px 48px;
+    width: 100%;
+}
+.text {
+    margin: auto;
 }

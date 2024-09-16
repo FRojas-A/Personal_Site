@@ -9,3 +9,9 @@
     background-color: white;
     border-radius: 8px;
 }
+
+@media (prefers-color-scheme: light) {
+    .container {
+      background-color: #c3c3c3;
+    }
+  }

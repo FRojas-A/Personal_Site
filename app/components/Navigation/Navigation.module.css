@@ -1,8 +1,19 @@
 .container {
     display: flex;
     justify-content: space-around;
-    padding: 24px;
-    position: sticky;
-    top: 0;
+    align-items: center;
     grid-column: 3 / 7;
+    padding: 24px;
+    top: 0;
+    position: sticky;
+    height: 80px;
+}
+
+.item {
+    padding: 16px;
+    cursor: pointer
+}
+
+.item:hover {
+    text-decoration: underline;
 }

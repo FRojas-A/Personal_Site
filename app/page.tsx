@@ -4,12 +4,19 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import Projects from "./components/Projects/Projects";
 import ContactMe from "./components/ContactMe/ContactMe";
+import { Fragment } from "react";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    // <main className={styles.main}>
+    <Fragment>
         <div className={styles.description}>
-            <Image
+            {/* TODO: cycle through different language greetings */}
+            <h1>Hello!</h1> 
+            <p>
+                My name is Frank Rojas. I am a software engineer with a focus on front-end development. Scroll down to find out more!
+            </p>
+            {/* <Image
             className={styles.logo}
             src="https://nextjs.org/icons/next.svg"
             alt="Next.js logo"
@@ -48,12 +55,12 @@ export default function Home() {
             >
                 Read our docs
             </a>
-            </div>
+            </div> */}
         </div>
         <ProfileCard />
         <AboutMe />
         <Projects />
         <ContactMe />    
-    </main>
+    </Fragment>
   );
 }

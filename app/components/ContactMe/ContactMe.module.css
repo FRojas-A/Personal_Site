@@ -1,6 +1,5 @@
 .container {
     grid-column: 3 / 7;
     grid-row: 4 / 5;
-    height: 100svh;
-    /* TODO: subtract footer and header from height */
+    min-height: calc(100svh - 160px);
 }

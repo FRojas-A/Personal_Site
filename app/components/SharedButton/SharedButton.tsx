@@ -8,6 +8,7 @@ interface buttonInterface {
     className?: string,
     link?: string
     fn?: Function
+    target?: string
 }
 
 export default function SharedButton(button: buttonInterface){
@@ -15,14 +16,16 @@ export default function SharedButton(button: buttonInterface){
     return (
         <div className={buttonStyle.container}>
             {button.link 
-            ? <a href={button.link} className={button.size}>
-                <span>
+            ? <a href={button.link} target={button.target} className={buttonStyle[button.size]}>
+                <span className={buttonStyle.text}>
                     {button.text}
                 </span>
                 {button.icon}
             </a>
             : <button className={`${buttonStyle[button.size]}`}>
-                <span>{button.text}</span>
+                <span className={buttonStyle.text}>
+                    {button.text}
+                </span>
                 {button.icon}
             </button>
             }
