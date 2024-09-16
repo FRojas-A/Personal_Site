@@ -6,6 +6,9 @@ export default function Navigation() {
             <span className={nav.item}>
                 Home
             </span>
+            <span>
+                Links
+            </span>
             <span className={nav.item}>
                 About me
             </span>

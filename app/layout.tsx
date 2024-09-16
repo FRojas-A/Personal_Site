@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "./components/Navigation/Navigation"
 import ProfileCard from "./components/ProfileCard/ProfileCard";
+import AboutMe from "./components/AboutMe/AboutMe";
+import Footer from "./components/Footer/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,8 +31,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navigation />
-        <ProfileCard />
+        {/* <ProfileCard /> */}
         {children}
+        <Footer />
       </body>
     </html>
   );

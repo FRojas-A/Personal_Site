@@ -1,10 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useEffect } from "react";
+import Footer from "./components/Footer/Footer";
+import AboutMe from "./components/AboutMe/AboutMe";
+import ProfileCard from "./components/ProfileCard/ProfileCard";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <main className={styles.main}>
+      <div className={styles.description}>
         <Image
           className={styles.logo}
           src="https://nextjs.org/icons/next.svg"
@@ -45,30 +49,9 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Github
-        </a>
-        <a
-          href="mailto:frankrojas215@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Email
-        </a>
-      </footer>
-    </div>
+      </div>
+      <ProfileCard />
+      <AboutMe />
+    </main>
   );
 }

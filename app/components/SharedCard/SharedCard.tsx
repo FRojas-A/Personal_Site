@@ -1,19 +1,18 @@
+import { Fragment, ReactNode } from "react"
 import card from "./SharedCard.module.css"
 
-export default function SharedCard(props: { title: string, body: string, footer: string, containerClass?: React.CSSProperties,  titleClass?: string, bodyClass?: string, footerClass?: string}) {
-    // const classnames = `${props.titleClass} ${props.bodyClass} ${props.footerClass}`
-    console.log(props.containerClass)
+export default function SharedCard(props: { title: string, body: string | ReactNode, footer: string | ReactNode }) {
     return (
-        <div className={`${card.container}`} style={props.containerClass}>
-            <div className={`${card.title} ${card.titleClass}`}>
+        <Fragment>
+            <div className={card.title}>
                 {props.title}
             </div>
-            <div className={`${card.body} ${card.bodyClass}`}>
+            <div className={card.body}>
                 {props.body}
             </div>
-            <div className={`${card.footer} ${card.footerClass}`}>
+            <div className={card.footer}>
                 {props.footer}
             </div>
-        </div>
+        </Fragment>
     )
 }
