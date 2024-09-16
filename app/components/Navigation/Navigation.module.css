@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 24px;
+    position: sticky;
+    top: 0;
+}
+
+.item {
+}
