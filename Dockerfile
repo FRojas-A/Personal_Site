@@ -1,18 +1,20 @@
-# Build stage
-FROM node:18.17.0-alpine AS builder
+# pull the node image
+FROM node:14
+
+# set the working directory
 WORKDIR /app
+
+# copy the package.json file
 COPY package*.json ./
+
+# install the dependencies
 RUN npm install
+
+# build the app
 COPY . .
-RUN npm run build
 
-# Production stage
-FROM node:18.17.0-alpine
-WORKDIR /app
-COPY --from=builder /app/next.config.mjs ./next.config.mjs
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+# expose port 3000
+EXPOSE 3000
 
+# start the app
 CMD ["npm", "start"]
