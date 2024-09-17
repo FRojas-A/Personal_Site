@@ -35,6 +35,27 @@
     padding: 20px 48px;
     width: 100%;
 }
+
 .text {
     margin: auto;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+.none {
+    padding: 0;
+    margin: 0;
+}
+
+.position {
+    position: absolute;
+    transition: all 300ms ease-in-out;
 }
