@@ -17,11 +17,11 @@ export default function links() {
                     target = "_blank"
                     />
             </div>
-            <div className={styles.github}>
+            <div className={styles.instagram}>
                 <SharedButton
-                    text = "Github"
+                    text = "Instagram"
                     size = "lg"
-                    link = "https://github.com/FRojas-A"
+                    link = "https://www.instagram.com/frojas.photos/"
                     target = "_blank"
                     />
             </div>
