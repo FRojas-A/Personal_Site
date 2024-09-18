@@ -48,13 +48,13 @@ export default function SharedButton(button: buttonInterface) {
                     <Copy
                         // visibility={copied ? "hidden" : "visible"}
                         strokeDasharray= {50}
-                        strokeDashoffset = {copied ? -50 : 0}
+                        strokeDashoffset = {copied ? 50 : 0}
                         className={buttonStyle.position}
                     />
                     <Check 
                        //  visibility={copied ? "visible" : "hidden"}
                         strokeDasharray= {50}
-                        strokeDashoffset = {copied ? 0 : -50}
+                        strokeDashoffset = {copied ? 0 : 50}
                         className={buttonStyle.position}
                     />
                 </span>}
