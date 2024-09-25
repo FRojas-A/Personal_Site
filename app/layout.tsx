@@ -32,7 +32,7 @@ export default function RootLayout({
         <main className="main">
             {children}
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

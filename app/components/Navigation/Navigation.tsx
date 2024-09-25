@@ -6,11 +6,12 @@ import { usePathname } from "next/navigation";
 import { Fragment } from "react";
 
 export default function Navigation() {
-    let isActive = usePathname() === "/";
+    let isHome = usePathname() === "/";
+    const disable = String(process.env.disable) === "true"
 
     return (
         <div className={nav.container}>
-            {isActive 
+            {isHome
             ? <Fragment>
                 <span onClick={() => scrollTo("home")} className={nav.item}>
                     Home
@@ -18,23 +19,50 @@ export default function Navigation() {
                 <Link href="/links" className={nav.item}>
                     Links
                 </Link>
-                <span className={nav.item} onClick={() => scrollTo("about")}>
-                    About me
+                <span className={`${nav.item} ${nav.disabled}`} onClick={() => scrollTo("about")}>
+                    About Me
                 </span>
-                <span className={nav.item} onClick={() => scrollTo("projects")}>
+                <span className={`${nav.item} ${nav.disabled}`} onClick={() => scrollTo("projects")}>
                     Projects
                 </span>
-                <span className={nav.item} onClick={() => scrollTo("contact")}>
-                    Contact me
+                <span className={`${nav.item} ${nav.disabled}`} onClick={() => scrollTo("contact")}>
+                    Contact Me
                 </span>
             </Fragment>
-            : <div>
-            {/* <Link href="/" className={nav.item} onClick={(e) => e.preventDefault()}>
-                Home
-            </Link> */}
-            </div>
+            : <Fragment>
+                <Link href="/" className={nav.item} onClick={(e) => {
+                    if (!disable) {
+                        e.preventDefault()
+                    }
+                }}>
+                    Home
+                </Link>
+                <span onClick={() => scrollTo("links")} className={nav.item}>
+                    Links
+                </span>
+                <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
+                    if (disable) {
+                        e.preventDefault()
+                    }
+                }}>
+                    About Me
+                </Link>
+                <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
+                    if (disable) {
+                        e.preventDefault()
+                    }
+                }}>
+                    Projects
+                </Link>
+                <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
+                    if (disable) {
+                        e.preventDefault()
+                    }
+                }}>
+                    Contact Me
+                </Link>
+            </Fragment>
             }
-            
         </div>
     )
 }

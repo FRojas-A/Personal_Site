@@ -16,4 +16,15 @@
 
 .item:hover {
     text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.disabled {
+    opacity: 30%;
+    cursor: default;
+}
+
+.disabled:hover {
+    opacity: 15%;
+    text-decoration: none;
 }

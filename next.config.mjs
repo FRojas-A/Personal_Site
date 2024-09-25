@@ -1,15 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     async redirects() {
-        return [
-                {
-                    source: "/",
-                    destination: "/links",
-                    permanent: false
-                }
-        ]
+        return []
     },
-    output: "standalone"
+    output: "standalone",
+    env: {
+        disable: "true"
+    }
 };
 
 export default nextConfig;
