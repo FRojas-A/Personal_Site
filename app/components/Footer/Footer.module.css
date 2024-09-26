@@ -1,6 +1,6 @@
 .footer {
     grid-row-end: page-end;
-    grid-column: 2 / 8;
+    grid-column: 1 / 9;
     display: flex;
     column-gap: 48px;
     align-items: center;
@@ -19,11 +19,6 @@
     justify-content: center;
   }
 
-@media (max-width: 600px) {
-    .footer {
-        visibility: collapse;
-    }
-}
   
   .footer a {
     display: flex;
@@ -32,6 +27,12 @@
   
   .footer img {
     flex-shrink: 0;
+  }
+
+  @media (min-width: 390px) {
+    .footer {
+      grid-column: 2 / 8;
+    }
   }
 
   /* Enable hover only on non-touch devices */
@@ -56,15 +57,7 @@
     .page {
       padding: 32px;
       padding-bottom: 80px;
-    }
-  
-    .main {
-      align-items: center;
-    }
-  
-    .main ol {
-      text-align: center;
-    }
+    }  
   
     .ctas {
       flex-direction: column;

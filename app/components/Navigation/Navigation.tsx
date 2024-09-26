@@ -3,66 +3,157 @@ import Link from "next/link"
 import nav from "./Navigation.module.css"
 import { scrollTo } from "@/app/utils/utils"
 import { usePathname } from "next/navigation";
-import { Fragment } from "react";
+import { Fragment, useState, SVGProps } from "react";
 
 export default function Navigation() {
-    let isHome = usePathname() === "/";
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    }
+
+    let path = usePathname();
     const disable = String(process.env.disable) === "true"
 
+    function Home() {
+        return (
+            <Link href="/" className={nav.item} onClick={(e) => {
+                if (path === "/") {
+                    e.preventDefault();
+                    scrollTo("home");
+                }
+                toggleMenu();
+            }}>
+                Home
+            </Link>
+        )
+    }
+
+    function Links() {
+        return (
+            <Link href="/links" className={nav.item} onClick={(e) => {
+                if (path === "/links") {
+                    e.preventDefault();
+                    scrollTo("home");
+                }
+                toggleMenu();
+            }}>
+                Links
+            </Link>
+        )
+    }
+
+    function AboutMe() {
+        return (
+            <span className={`${nav.item} ${nav.disabled}`} onClick={() => {
+                scrollTo("about");
+                if (!disable) toggleMenu();
+            }}>
+                About Me
+            </span>
+        )
+    }
+
+    function Projects() {
+        return (
+            <span className={`${nav.item} ${nav.disabled}`} onClick={() => {
+                scrollTo("about");
+                if (!disable) toggleMenu();
+            }}>
+                Projects
+            </span>
+        )
+    }
+    
+    function ContactMe() {
+        return (
+            <span className={`${nav.item} ${nav.disabled}`} onClick={() => {
+                scrollTo("about");
+                if (!disable) toggleMenu();
+            }}>
+                    Contact Me
+            </span>
+        )
+    }
+
+    function Exit(props:SVGProps<SVGSVGElement>) {
+        return (
+            <svg 
+                width="48px" 
+                height="48px" 
+                strokeWidth="1.5" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg" 
+                color="#000000"
+                {...props}
+            >
+                <path d="M6.75827 17.2426L12.0009 12M17.2435 6.75736L12.0009 12M12.0009 12L6.75827 6.75736M12.0009 12L17.2435 17.2426" stroke="#000000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
+            </svg>
+        )
+    }
+
+    function Hamburger(props:SVGProps<SVGSVGElement>) {
+        return (
+            <svg 
+                width="32px" 
+                height="32px" 
+                strokeWidth="1.5" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg" 
+                color="#000000"
+                {...props}
+            >
+                <path d="M3 5H21" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M3 12H21" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M3 19H21" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+            </svg>
+        )
+    }
+
     return (
-        <div className={nav.container}>
-            {isHome
-            ? <Fragment>
-                <span onClick={() => scrollTo("home")} className={nav.item}>
-                    Home
+        <Fragment>
+            <nav className={nav["container"]}>
+                <Home />
+                <Links />
+                <AboutMe />
+                <Projects />
+                <ContactMe />
+            </nav>
+            <nav className={nav["mobile-container"]}>
+                <span className={nav.hamburger} onClick={() => toggleMenu()}>
+                    <Hamburger
+                        strokeDasharray={50}
+                        strokeDashoffset={isOpen ? 50 : 0}
+                        className={nav.icon}
+                    />
+                    <Exit 
+                        strokeDasharray={50}
+                        strokeDashoffset={isOpen ? 0 : 50}
+                        className={nav.icon}   
+                    />
                 </span>
-                <Link href="/links" className={nav.item}>
-                    Links
-                </Link>
-                <span className={`${nav.item} ${nav.disabled}`} onClick={() => scrollTo("about")}>
-                    About Me
-                </span>
-                <span className={`${nav.item} ${nav.disabled}`} onClick={() => scrollTo("projects")}>
-                    Projects
-                </span>
-                <span className={`${nav.item} ${nav.disabled}`} onClick={() => scrollTo("contact")}>
-                    Contact Me
-                </span>
-            </Fragment>
-            : <Fragment>
-                <Link href="/" className={nav.item} onClick={(e) => {
-                    if (!disable) {
-                        e.preventDefault()
-                    }
-                }}>
-                    Home
-                </Link>
-                <span onClick={() => scrollTo("links")} className={nav.item}>
-                    Links
-                </span>
-                <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
-                    if (disable) {
-                        e.preventDefault()
-                    }
-                }}>
-                    About Me
-                </Link>
-                <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
-                    if (disable) {
-                        e.preventDefault()
-                    }
-                }}>
-                    Projects
-                </Link>
-                <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
-                    if (disable) {
-                        e.preventDefault()
-                    }
-                }}>
-                    Contact Me
-                </Link>
-            </Fragment>
-            }
-        </div>
+                <div className={isOpen ? `${nav["menu"]} ${nav.show} ` : nav["menu"]}>
+                    <ul>
+                        <li >
+                            <Home />
+                        </li>
+                        <li >
+                            <Links />
+                        </li>
+                        <li >
+                            <AboutMe />
+                        </li>
+                        <li >
+                            <Projects />
+                        </li>
+                        <li >
+                            <ContactMe />
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </Fragment>
     )
 }
