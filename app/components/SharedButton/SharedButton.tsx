@@ -11,6 +11,7 @@ interface buttonInterface {
     fn?: Function
     target?: string
     copy?: string
+    download?: string
 }
 
 export default function SharedButton(button: buttonInterface) {
@@ -27,11 +28,10 @@ export default function SharedButton(button: buttonInterface) {
     return (
         <div className={buttonStyle.container}>
             {button.link
-            ? <a href={button.link} target={button.target} className={buttonStyle[button.size]}>
+            ? <a href={button.link} target={button.target} className={buttonStyle[button.size]} download={button.download}>
                 <span className={buttonStyle.text}>
-                    {button.text}
+                    {button.text}{button.icon}
                 </span>
-                {button.icon}
             </a>
             : <a className={`${buttonStyle[button.size]}`} onClick={async () => {if (button.copy)
                 try {
@@ -42,17 +42,17 @@ export default function SharedButton(button: buttonInterface) {
                 }
             }}>
                 {button.text && <span className={buttonStyle.text}>
-                    {button.text}
+                    {button.text}{button.icon}
                 </span>}
                 {button.copy && <span className={buttonStyle.icon}>
                     <Copy
-                        strokeDasharray= {50}
-                        strokeDashoffset = {copied ? 50 : 0}
+                        strokeDasharray={50}
+                        strokeDashoffset={copied ? 50 : 0}
                         className={buttonStyle.position}
                     />
                     <Check 
-                        strokeDasharray= {50}
-                        strokeDashoffset = {copied ? 0 : 50}
+                        strokeDasharray={50}
+                        strokeDashoffset={copied ? 0 : 50}
                         className={buttonStyle.position}
                     />
                 </span>}

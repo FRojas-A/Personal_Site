@@ -45,9 +45,9 @@ export default function Navigation() {
 
     function AboutMe() {
         return (
-            <span className={`${nav.item} ${nav.disabled}`} onClick={() => {
+            <span className={`${nav.item}`} onClick={() => {
                 scrollTo("about");
-                if (!disable) toggleMenu();
+                toggleMenu();
             }}>
                 About Me
             </span>
@@ -115,11 +115,13 @@ export default function Navigation() {
     return (
         <Fragment>
             <nav className={nav["container"]}>
-                <Home />
-                <Links />
-                <AboutMe />
-                <Projects />
-                <ContactMe />
+                <div className={nav["nav-items"]}>
+                    <Home />
+                    <Links />
+                    <AboutMe />
+                    <Projects />
+                    <ContactMe />
+                </div>
             </nav>
             <nav className={nav["mobile-container"]}>
                 <span className={nav.hamburger} onClick={() => toggleMenu()}>

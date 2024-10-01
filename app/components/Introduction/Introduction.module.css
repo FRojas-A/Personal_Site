@@ -6,9 +6,13 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    min-height: calc(100svh - 160px);
-    width: 100%;
-    max-width: 800px;
+    min-height: calc(100svh - 80px);
+    width: 80svw;
+    max-width: 1400px;
+}
+
+.container p {
+    font-size: 1.25rem;
 }
 
 .scroller-container {
@@ -33,7 +37,7 @@
     font-size: 48px;
 }
 
-@media (min-width: 500px) {
+/* @media (min-width: 500px) {
     .container { 
         grid-column: 1 / 9;
         padding: 0 24px;
@@ -70,4 +74,4 @@
         grid-column: 3 / 7;
         padding: 0;
     }
-}
+} */

@@ -11,7 +11,7 @@ export default function Home() {
     <Fragment>
         <Introduction />
         {disable && <ProfileCard />}
-        {disable && <AboutMe />}
+        <AboutMe />
         {disable && <Projects />}
         {disable && <ContactMe />}    
     </Fragment>

@@ -1,6 +1,46 @@
 .container {
-    grid-column: 3 / 7;
+    grid-column: 1 / 9;
     grid-row: 2 / 3;
-    min-height: calc(100svh - 80px);
+    min-height: calc(100svh - 160px);
+    max-width: 1400px;
+    width: 80svw;
     scroll-margin-top: 80px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container h1 {
+    margin-bottom: 8px;
+    font-size: 48px;
+}
+
+.container h2 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-size: 36px;
+}
+
+.container p {
+    font-size: 1.25rem;
+
+}
+
+.container ul {
+    padding: 0 16px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    list-style: circle;
+}
+
+.container li {
+    font-size: 1.15rem;
+}
+
+.download-resume {
+    max-width: 265px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0;
+
 }
