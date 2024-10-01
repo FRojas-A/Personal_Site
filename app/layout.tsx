@@ -18,6 +18,16 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Frank Rojas",
   description: "Frank's personal website",
+  openGraph: {
+        type: "website",
+        url: "https://frankrojas.com",
+        title: "Frank Rojas",
+        description: "Portfolio site made by Frank Rojas",
+        siteName: "Frank Rojas",
+        // images: [{
+        // url: "https://example.com/og.png",
+        // }],
+   }
 };
 
 export default function RootLayout({
