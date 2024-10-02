@@ -64,8 +64,8 @@ export default function Navigation() {
     function Projects() {
         return (
             <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
+                e.preventDefault();
                 if (path === "/") {
-                    e.preventDefault();
                     scrollTo("projects");
                 } else {
                     scrollToSection("projects")
@@ -80,8 +80,8 @@ export default function Navigation() {
     function ContactMe() {
         return (
             <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
+                e.preventDefault();
                 if (path === "/") {
-                    e.preventDefault();
                     scrollTo("contact");
                 } else {
                     scrollToSection("contact")
