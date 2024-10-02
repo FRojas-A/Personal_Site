@@ -4,9 +4,11 @@ import nav from "./Navigation.module.css"
 import { scrollTo } from "@/app/utils/utils"
 import { usePathname } from "next/navigation";
 import { Fragment, useState, SVGProps } from "react";
+import { useScroll } from "@/app/contexts/ScrollContext";
 
 export default function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
+    const { scrollToSection } = useScroll()
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -45,34 +47,49 @@ export default function Navigation() {
 
     function AboutMe() {
         return (
-            <span className={`${nav.item}`} onClick={() => {
-                scrollTo("about");
+            <Link href="/" className={`${nav.item}`} onClick={(e) => {
+                if (path === "/") {
+                    e.preventDefault();
+                    scrollTo("about");
+                } else {
+                    scrollToSection("about")
+                }
                 toggleMenu();
             }}>
                 About Me
-            </span>
+            </Link>
         )
     }
 
     function Projects() {
         return (
-            <span className={`${nav.item} ${nav.disabled}`} onClick={() => {
-                scrollTo("about");
-                if (!disable) toggleMenu();
+            <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
+                if (path === "/") {
+                    e.preventDefault();
+                    scrollTo("projects");
+                } else {
+                    scrollToSection("projects")
+                }
+                toggleMenu();
             }}>
                 Projects
-            </span>
+            </Link>
         )
     }
     
     function ContactMe() {
         return (
-            <span className={`${nav.item} ${nav.disabled}`} onClick={() => {
-                scrollTo("about");
-                if (!disable) toggleMenu();
+            <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
+                if (path === "/") {
+                    e.preventDefault();
+                    scrollTo("contact");
+                } else {
+                    scrollToSection("contact")
+                }
+                toggleMenu();
             }}>
                     Contact Me
-            </span>
+            </Link>
         )
     }
 

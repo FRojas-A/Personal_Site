@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "./components/Navigation/Navigation"
 import Footer from "./components/Footer/Footer";
+import { ScrollProvider } from "./contexts/ScrollContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,11 +39,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`} id="home">
-        <Navigation />
-        <main className="main">
-            {children}
-        </main>
-        <Footer />
+        <ScrollProvider>
+          <Navigation />
+          <main className="main">
+              {children}
+          </main>
+          <Footer />
+        </ScrollProvider>
       </body>
     </html>
   );
