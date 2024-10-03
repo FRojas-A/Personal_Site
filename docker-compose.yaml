@@ -14,7 +14,10 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - /etc/ssl/webserver/domain.cert.pem:/etc/nginx/ssl/domain.cert.pem
-      - /etc/ssl/webserver/private.key.pem:/etc/nginx/ssl/private.key.pem
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./certbot/www/:/var/www/certbot/:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     restart: always
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
