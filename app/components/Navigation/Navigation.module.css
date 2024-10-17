@@ -72,7 +72,7 @@
     position: relative;
     background: var(--background);
     width: 100svw;
-    height: 100svh  ;
+    height: 100vh;
     opacity: 0;
     visibility: hidden;
 }
@@ -116,6 +116,7 @@
 
     body:has(.menu.show) {
         overflow-y: hidden;
+        touch-action: none;
+        -ms-touch-action: none;
     }
-    
 }
