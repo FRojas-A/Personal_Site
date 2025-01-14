@@ -1,13 +1,10 @@
 .container {
-    grid-column: 1 / 9;
-    grid-row: 2 / 3;
+    grid-column: 2;
+    grid-row: 1 / 2;
     min-height: calc(100svh - 160px);
-    max-width: 1400px;
-    width: 80svw;
+    width: 100%;
     scroll-margin-top: 80px;
-    margin-top: 80px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 4rem;
 }
 
 .container h1 {

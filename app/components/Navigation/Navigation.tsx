@@ -5,6 +5,7 @@ import { scrollTo } from "@/app/utils/utils"
 import { usePathname } from "next/navigation";
 import { Fragment, useState, SVGProps } from "react";
 import { useScroll } from "@/app/contexts/ScrollContext";
+import SharedButton from "../SharedButton/SharedButton";
 
 export default function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +57,7 @@ export default function Navigation() {
                 }
                 toggleMenu();
             }}>
-                About Me
+                About
             </Link>
         )
     }
@@ -88,7 +89,7 @@ export default function Navigation() {
                 }
                 toggleMenu();
             }}>
-                    Contact Me
+                    Contact
             </Link>
         )
     }
@@ -138,6 +139,12 @@ export default function Navigation() {
                     <AboutMe />
                     <Projects />
                     <ContactMe />
+                    <SharedButton 
+                        text= "Resume"
+                        link="/pdfs/Frank_Rojas_Resume_2024.pdf"
+                        size="sm"
+                        download={"Frank_Rojas_Resume_2024"}
+                    />
                 </div>
             </nav>
             <nav className={nav["mobile-container"]}>

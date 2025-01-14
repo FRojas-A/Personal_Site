@@ -1,6 +1,7 @@
 .container {
     display: flex;
-    border: solid white 3px;
+    background-color: var(--alternate);
+    color: var(--background);
     border-radius: 10px;
 }
 
@@ -8,7 +9,7 @@
 
 @media (hover: hover) and (pointer: fine) {
     .container:hover {
-        background-color: rgb(24, 24, 24);
+        transform: scale(1.125);
     }
 }
 

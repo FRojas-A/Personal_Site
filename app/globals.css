@@ -1,20 +1,22 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --alternate: #FCBA04;
+  --background: #F2F4F8;
+  --foreground: #171D28;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --alternate: #FCBA04;
+    --background: #171D28;
+    --primary: #212D40;
+    --secondary: #9BA9C5;
+    --tertiary: #D8DEE9;
+
+    --foreground: #F2F4F8;
   }
 
   html {
     color-scheme: dark;
-  }
-
-  svg {
-      filter: invert();
   }
 }
 
@@ -30,9 +32,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: grid;
-  grid-template-rows: [nav] auto [home] auto [footer] auto [page-end];
-  grid-template-columns: repeat(8, 1fr)
 }
 
 * {
@@ -54,13 +53,15 @@ a {
     --button-secondary-hover: #f2f2f2;
     display: grid;
     grid-row: home / footer;
-    grid-column: 1 / 9;
     grid-template-rows: 20px 1fr 20px;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
     grid-template-rows: [home-start] auto [about-start] auto [project-start] auto [contact-start] auto [page-end];
-    align-items: center;
-    justify-items: center;
     min-height: calc(100svh - 160px);
+    max-width: 1280px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: auto;
     font-family: var(--font-geist-sans);
   }
 
