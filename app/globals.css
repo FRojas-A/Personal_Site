@@ -45,6 +45,10 @@ a {
   text-decoration: none;
 }
 
+h3, p {
+  color: var(--tertiary)
+}
+
 .main {
     --gray-rgb: 0, 0, 0;
     --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
