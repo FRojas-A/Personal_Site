@@ -25,5 +25,10 @@ const links = {
     ],
 }
 
+export type Links = {
+    name: string,
+    url: string
+}
+
 export default links;
 export const { socials, otherLinks } = links;

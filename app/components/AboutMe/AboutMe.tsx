@@ -1,7 +1,12 @@
 import SectionWrapper from "@/app/wrappers/SectionWrapper";
 import styles from "./AboutMe.module.css"
+import { socials, otherLinks, Links } from "@/app/config";
 
 export default function AboutMe() {
+
+    const instagram: Links = socials.find(link => link.name === "Instagram")!;
+    const etsy: Links = otherLinks.find(link => link.name === "Etsy")!;
+
     return (
         <SectionWrapper name="about">
             <div className={styles.container} id="about">
@@ -12,7 +17,7 @@ export default function AboutMe() {
                 </p>
                 <br />
                 <p>
-                    In my free time I like to <a target="_blank" href="https://www.instagram.com/frojas.photos/">bird watch</a>, boulder, play video games, and lounge around with my girlfriend, 2 dogs, and cat! I also design and sell functional 3D printed <a target="_blank" href="https://www.etsy.com/shop/RojasConcepts">car parts</a>.
+                    In my free time I like to <a target="_blank" href={instagram.url} aria-label={instagram.name + "(Opens in a new tab)"}>bird watch</a>, boulder, play video games, and lounge around with my girlfriend, 2 dogs, and cat! I also design and sell functional 3D printed <a target="_blank" href={etsy.url} aria-label={etsy.name + "(Opens in a new tab)"}>car parts</a>.
                 </p>
                 <br />
                 <p>

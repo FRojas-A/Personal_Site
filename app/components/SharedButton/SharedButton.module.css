@@ -3,6 +3,7 @@
     background-color: var(--alternate);
     color: var(--background);
     border-radius: 10px;
+    transition: transform .05s ease;
 }
 
 
