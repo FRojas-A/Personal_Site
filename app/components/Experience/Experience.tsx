@@ -18,9 +18,11 @@ export function Experience() {
                 {jobData.jobs.map((job, index) => {
                     return (
                         <div key={index} className={styles["job-container"]}>
-                            <a target="_blank" href={job.urls[0]} className={styles["link"]} aria-label={job.company + " (Opens in a new window)"}/>
                             <div className={styles["info"]}>
+                                <a target="_blank" href={job.urls[0]} className={styles["link"]} aria-label={job.company + " (Opens in a new window)"}>
+                                    <span></span>
                                 <h4>{job.title} - {job.company}</h4>
+                                </a>       
                                 <h5>{formatDate(job.dateRange[0], dateOptions)} - {formatDate(job.dateRange[1], dateOptions)}</h5>
                             </div>
                             <div className={styles["description"]}>

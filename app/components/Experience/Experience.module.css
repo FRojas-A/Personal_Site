@@ -1,27 +1,33 @@
 .experience {
-    grid-column: 2;
     scroll-margin-top: 80px;
 }
 
 .job-container {
-    padding: 1.5rem;
+    padding: 1.5rem 0.5rem;
     margin-bottom: 0.5rem;
     border-radius: 16px;
     transition: transform .05s ease, background-color .05s ease;
 }
 
-.job-container:hover {
-    background-color: var(--primary);
-    transform: scale(1.05);
-
-}
-
-.job-container:hover > a {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
+@media (min-width: 1024px) {
+    
+    .job-container {
+    padding: 1.5rem;
+    }
+    
+    .job-container:hover {
+        background-color: var(--primary);
+        transform: scale(1.05);
+        
+    }
+    
+    .job-container:hover .info .link span {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
 }
 
 .title {

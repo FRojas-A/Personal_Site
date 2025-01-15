@@ -1,15 +1,27 @@
 .container {
-    grid-row-start: 1;
-    grid-column: 1;
-    display: flex;
-    position: sticky;
-    flex-direction: column;
-    min-height: calc(100svh - 80px);
-    width: 100%;
     max-width: 636px;
-    padding-top: 4rem;
+    padding-top: 1rem;
     top: 80px;
     height: fit-content
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 40%;
+        display: flex;
+        position: sticky;
+        flex-direction: column;
+        min-height: calc(100svh - 80px);
+        padding-top: 4rem;
+    }
+
+    .footer {
+        bottom: 4rem;
+        position: absolute;
+        color: var(--secondary);
+        display: flex;
+        gap: 16px;
+    }
 }
 
 .title {
@@ -47,11 +59,9 @@
 }
 
 .footer {
-    bottom: 4rem;
-    position: absolute;
-    color: var(--secondary);
     display: flex;
     gap: 16px;
+    margin-top: 64px;
 }
 
 .links {

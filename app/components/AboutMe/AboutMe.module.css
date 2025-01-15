@@ -1,14 +1,15 @@
 .container {
-    grid-column: 2;
-    grid-row: 1 / 2;
     min-height: calc(100svh - 160px);
-    width: 100%;
     scroll-margin-top: 80px;
     padding-top: 4rem;
 }
 
 .container h1 {
-    margin-bottom: 8px;
+    padding-bottom: 12px;
+}
+
+.description {
+    padding-top: 1.5rem;
 }
 
 .container h2 {
@@ -41,4 +42,11 @@
     margin: 0 auto;
     padding: 24px 0;
 
+}
+
+@media (min-width: 1024px) {
+    .container {
+        min-height: fit-content;
+        margin-bottom: 6rem;
+    }
 }

@@ -11,11 +11,13 @@ export default function Home() {
   return (
     <Fragment>
         <Introduction />
+        <section id="content">
         {disable && <ProfileCard />}
         <AboutMe />
         <Experience />
         {disable && <Projects />}
         {disable && <ContactMe />}    
+        </section>
     </Fragment>
   );
 }

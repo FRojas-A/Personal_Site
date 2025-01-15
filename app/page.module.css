@@ -4,9 +4,6 @@
   align-content: center;
   justify-content: center;
   gap: 32px;
-  grid-row-start: 1;
-  grid-column: 3 / 7;
-  width: 100%;
   padding: 0 64px;
   min-height: 100svh;
 }

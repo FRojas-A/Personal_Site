@@ -1,6 +1,4 @@
 .footer {
-    grid-row-end: page-end;
-    grid-column: 2;
     display: flex;
     column-gap: 48px;
     align-items: center;
@@ -29,11 +27,6 @@
     flex-shrink: 0;
   }
 
-  @media (min-width: 390px) {
-    .footer {
-      grid-column: 2 / 8;
-    }
-  }
 
   /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {

@@ -60,7 +60,6 @@
 }
 
 .mobile-container {
-    grid-column: 2;
     height: 80px;
     text-align: center;
     display: none;
@@ -104,7 +103,7 @@
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 715px) {
     .mobile-container {
         display: flex;
         position: sticky;

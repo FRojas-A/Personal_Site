@@ -29,13 +29,13 @@ export default function Introduction() {
                 })}
 
             </span>
-            <div className={styles["scroller-container"]}>
+            {/* <div className={styles["scroller-container"]}> */}
                 {/* <div className={styles.scroller} style={{ transform: `translateY(-${index * 100}%)`}}>
                     {words.map((word, i) => (
                         <h1 key={i} className={styles.hello}>{word}!</h1>
                     ))}
                 </div>  */}
-            </div>
+            {/* </div> */}
             {/* <p>
                 My name is Frank Rojas and I'm a Software Engineer based in Austin, TX. I have a passion for front-end development and problem solving. Over the past few years, I've worked on projects ranging from enhancing authentication flows to building micro front-end applications. My experience includes modern web technologies like TypeScript, JavaScript, React.js, Stencil.js, Next.js, and more. I enjoy collaborating with teams to create secure, user-friendly solutions. Outside of coding, I'm a gamer, car enthusiast, and avid photographer of birds. 
             </p> */}

@@ -61,19 +61,11 @@ p {
     --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
     --button-primary-hover: #383838;
     --button-secondary-hover: #f2f2f2;
-    display: grid;
-    grid-row: home / footer;
-    grid-template-rows: 20px 1fr 20px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    grid-template-rows: [home-start] auto [about-start] auto [project-start] auto [contact-start] auto [page-end];
     min-height: calc(100svh - 160px);
     max-width: 1280px;
-    padding-left: 3rem;
-    padding-right: 3rem;
     margin: auto;
     font-family: var(--font-geist-sans);
-  }
+}
 
 @media (prefers-color-scheme: dark) {
     .main {
@@ -82,11 +74,20 @@ p {
       --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
       --button-primary-hover: #ccc;
       --button-secondary-hover: #1a1a1a;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 
-@media (max-width: 600px) {
+@media (min-width: 1024px) {
     .main {
-      padding: 0 32px;
+      display: flex;
+      gap: 8px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    #content {
+      width: 60%;
     }
   }
