@@ -1,42 +1,41 @@
 .container {
-    grid-column: 4 / 6;
-    grid-row: 1 / 4;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(4, auto);
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin-left: 62px; 
+  grid-column: 4 / 6;
+  grid-row: 1 / 4;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-left: 62px;
 }
 
 .title {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    width: fit-content;
-    margin: auto;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: fit-content;
+  margin: auto;
 }
 
 .linkedIn {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    width: 192px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: 192px;
 }
 
 .instagram {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    width: 192px;   
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  width: 192px;
 }
 
 .email {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    width: 192px; 
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  width: 192px;
 }
 
 .copy {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
 }
-

@@ -1,28 +1,28 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    min-width: 150px;
-    min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-width: 150px;
+  min-height: 250px;
 }
 
 .title {
-    padding-top: 16px;
-    flex-grow: 1;
-    width: fit-content;
-    margin: auto
+  padding-top: 16px;
+  flex-grow: 1;
+  width: fit-content;
+  margin: auto;
 }
 
 .body {
-    padding: 16px 0px;
-    flex-grow: 2;
-    width: fit-content;
-    margin: auto
+  padding: 16px 0px;
+  flex-grow: 2;
+  width: fit-content;
+  margin: auto;
 }
 
 .footer {
-    padding-bottom: 16px;
-    flex-grow: 1;
-    width: fit-content;
-    margin: auto
+  padding-bottom: 16px;
+  flex-grow: 1;
+  width: fit-content;
+  margin: auto;
 }

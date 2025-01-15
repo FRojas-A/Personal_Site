@@ -7,17 +7,17 @@ import Introduction from "./components/Introduction/Introduction";
 import { Experience } from "./components/Experience/Experience";
 
 export default function Home() {
-    const disable = String(process.env.disable) === "false"
+  const disable = String(process.env.disable) === "false";
   return (
     <Fragment>
-        <Introduction />
-        <section id="content">
+      <Introduction />
+      <section id="content">
         {disable && <ProfileCard />}
         <AboutMe />
         <Experience />
         {disable && <Projects />}
-        {disable && <ContactMe />}    
-        </section>
+        {disable && <ContactMe />}
+      </section>
     </Fragment>
   );
 }

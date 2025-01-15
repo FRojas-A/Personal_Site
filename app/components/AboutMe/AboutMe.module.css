@@ -1,53 +1,52 @@
 .container {
-    scroll-margin-top: 80px;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+  scroll-margin-top: 80px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .container h1 {
-    font-size: 28px;
-    padding-bottom: 12px;
+  font-size: 28px;
+  padding-bottom: 12px;
 }
 
 .description {
-    padding-top: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .container h2 {
-    margin-top: 24px;
-    margin-bottom: 8px;
+  margin-top: 24px;
+  margin-bottom: 8px;
 }
 
 .container a {
-    color: var(--tertiary);
+  color: var(--tertiary);
 }
 
 .container a:hover {
-    color: var(--alternate)
+  color: var(--alternate);
 }
 
 .container ul {
-    padding: 0 16px;
-    margin-top: 8px;
-    margin-bottom: 16px;
-    list-style: circle;
+  padding: 0 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  list-style: circle;
 }
 
 .container li {
-    font-size: 1.15rem;
+  font-size: 1.15rem;
 }
 
 .download-resume {
-    max-width: 265px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 24px 0;
-
+  max-width: 265px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 0;
 }
 
 @media (min-width: 1024px) {
-    .container {
-        min-height: fit-content;
-        padding-bottom: 6rem;
-    }
+  .container {
+    min-height: fit-content;
+    padding-bottom: 6rem;
+  }
 }

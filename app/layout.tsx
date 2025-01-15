@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navigation from "./components/Navigation/Navigation"
-import Footer from "./components/Footer/Footer";
+import Navigation from "./components/Navigation/Navigation";
 import { ScrollProvider } from "./contexts/ScrollContext";
 
 const geistSans = localFont({
@@ -20,15 +19,15 @@ export const metadata: Metadata = {
   title: "Frank Rojas",
   description: "Frank's personal website",
   openGraph: {
-        type: "website",
-        url: "https://frankrojas.com",
-        title: "Frank Rojas",
-        description: "Portfolio site made by Frank Rojas",
-        siteName: "Frank Rojas",
-        // images: [{
-        // url: "https://example.com/og.png",
-        // }],
-   }
+    type: "website",
+    url: "https://frankrojas.com",
+    title: "Frank Rojas",
+    description: "Portfolio site made by Frank Rojas",
+    siteName: "Frank Rojas",
+    // images: [{
+    // url: "https://example.com/og.png",
+    // }],
+  },
 };
 
 export default function RootLayout({
@@ -41,9 +40,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`} id="home">
         <ScrollProvider>
           <Navigation />
-          <main className="main">
-              {children}
-          </main>
+          <main className="main">{children}</main>
         </ScrollProvider>
       </body>
     </html>

@@ -1,13 +1,9 @@
-import styles from "./SharedPill.module.css"
+import styles from "./SharedPill.module.css";
 
 type PillType = {
-    text: string,
-}
+  text: string;
+};
 
 export function SharedPill(pill: PillType) {
-    return (
-        <div className={styles["container"]}>
-            {pill.text}
-        </div>
-    )
+  return <div className={styles["container"]}>{pill.text}</div>;
 }

@@ -1,79 +1,79 @@
 .container {
-    max-width: 636px;
-    padding-top: 1rem;
-    top: 80px;
-    height: fit-content
+  max-width: 636px;
+  padding-top: 1rem;
+  top: 80px;
+  height: fit-content;
 }
 
 @media (min-width: 1024px) {
-    .container {
-        width: 40%;
-        display: flex;
-        position: sticky;
-        flex-direction: column;
-        min-height: calc(100svh - 80px);
-        padding-top: 4rem;
-    }
+  .container {
+    width: 40%;
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    min-height: calc(100svh - 80px);
+    padding-top: 4rem;
+  }
 
-    .footer {
-        bottom: 4rem;
-        position: absolute;
-        color: var(--secondary);
-        display: flex;
-        gap: 16px;
-    }
+  .footer {
+    bottom: 4rem;
+    position: absolute;
+    color: var(--secondary);
+    display: flex;
+    gap: 16px;
+  }
 }
 
 .title {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 .subtitle {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .container p {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .scroller-container {
-    height: 64px;
-    width: fit-content;
-    position: relative;
-    overflow: hidden;
-    z-index: -1;
+  height: 64px;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .scroller {
-    display: flex;
-    height: 72px;
-    flex-direction: column;
-    transition: transform 1s ease-in-out;
+  display: flex;
+  height: 72px;
+  flex-direction: column;
+  transition: transform 1s ease-in-out;
 }
 
 .hello {
-    display: flex;
-    height: 56px;
-    margin: 8px 0px;
-    font-size: 48px;
+  display: flex;
+  height: 56px;
+  margin: 8px 0px;
+  font-size: 48px;
 }
 
 .footer {
-    display: flex;
-    gap: 16px;
-    margin-top: 64px;
+  display: flex;
+  gap: 16px;
+  margin-top: 64px;
 }
 
 .links {
-    display: flex;
-    padding: 8px;
+  display: flex;
+  padding: 8px;
 }
 
 .links svg {
-    width: 36px;
+  width: 36px;
 }
 
 .links:hover {
-    color: var(--tertiary);
-    cursor: pointer;
+  color: var(--tertiary);
+  cursor: pointer;
 }

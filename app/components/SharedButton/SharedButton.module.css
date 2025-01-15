@@ -1,70 +1,68 @@
 .container {
-    display: flex;
-    background-color: var(--alternate);
-    color: var(--background);
-    border-radius: 10px;
-    transition: transform .05s ease;
+  display: flex;
+  background-color: var(--alternate);
+  color: var(--background);
+  border-radius: 10px;
+  transition: transform 0.05s ease;
 }
 
-
-
 @media (hover: hover) and (pointer: fine) {
-    .container:hover {
-        transform: scale(1.125);
-    }
+  .container:hover {
+    transform: scale(1.125);
+  }
 }
 
 @media (prefers-color-scheme: light) {
-    .container{
-        border-color: black;
-    }
-    
-    .container:hover {
-      background-color: #e3e3e3;
-    }
+  .container {
+    border-color: black;
   }
 
+  .container:hover {
+    background-color: #e3e3e3;
+  }
+}
+
 .sm {
-    display: flex;
-    padding: 8px 16px;
-    width: 100%;
+  display: flex;
+  padding: 8px 16px;
+  width: 100%;
 }
 
 .md {
-    display: flex;
-    padding: 12px 24px;
-    width: 100%;
+  display: flex;
+  padding: 12px 24px;
+  width: 100%;
 }
 
 .lg {
-    display: flex;
-    padding: 20px 48px;
-    width: 100%;
+  display: flex;
+  padding: 20px 48px;
+  width: 100%;
 }
 
 .text {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-    height: 32px;
-    width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
 }
 
 .none {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .position {
-    position: absolute;
-    transition: all 300ms ease-in-out;
+  position: absolute;
+  transition: all 300ms ease-in-out;
 }

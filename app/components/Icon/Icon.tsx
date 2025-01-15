@@ -5,22 +5,22 @@ import Instagram from "@/app/icons/Instagram";
 import LinkedIn from "@/app/icons/LinkedIn";
 
 type IconType = {
-    name: string
-}
+  name: string;
+};
 
 export default function Icon(icon: IconType) {
-    switch(icon.name) {
-        case "GitHub":
-            return <GitHub />;
-        case "LinkedIn":
-            return <LinkedIn />;
-        case "Instagram":
-            return <Instagram />;
-        case "Email":
-            return <Email />;
-        case "Download":
-            return <Download />;
-        default:
-            return <GitHub />
-    }
+  switch (icon.name) {
+    case "GitHub":
+      return <GitHub />;
+    case "LinkedIn":
+      return <LinkedIn />;
+    case "Instagram":
+      return <Instagram />;
+    case "Email":
+      return <Email />;
+    case "Download":
+      return <Download />;
+    default:
+      return <GitHub />;
+  }
 }
