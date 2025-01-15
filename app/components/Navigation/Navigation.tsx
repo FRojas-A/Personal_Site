@@ -62,6 +62,22 @@ export default function Navigation() {
         )
     }
 
+    function Experience() {
+        return (
+            <Link href="/" className={`${nav.item}`} onClick={(e) => {
+                if (path === "/") {
+                    e.preventDefault();
+                    scrollTo("experience");
+                } else {
+                    scrollToSection("experience")
+                }
+                toggleMenu();
+            }}>
+                Experience
+            </Link>
+        )
+    }
+
     function Projects() {
         return (
             <Link href="/" className={`${nav.item} ${nav.disabled}`} onClick={(e) => {
@@ -134,16 +150,15 @@ export default function Navigation() {
         <Fragment>
             <nav className={nav["container"]}>
                 <div className={nav["nav-items"]}>
-                    <Home />
-                    <Links />
                     <AboutMe />
+                    <Experience />
                     <Projects />
                     <ContactMe />
                     <SharedButton 
-                        text= "Resume"
-                        link="/pdfs/Frank_Rojas_Resume_2024.pdf"
+                        text= "Résumé"
+                        link="/pdfs/Frank_Rojas_Resume_2025.pdf"
                         size="sm"
-                        download={"Frank_Rojas_Resume_2024"}
+                        download={"Frank_Rojas_Resume_2025"}
                     />
                 </div>
             </nav>

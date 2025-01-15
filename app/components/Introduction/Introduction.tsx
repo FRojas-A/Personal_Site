@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./Introduction.module.css"
+import { socials } from "../../config";
+import Icon from "../Icon/Icon";
 
 export default function Introduction() {
     const [index, setIndex] = useState(0);
@@ -17,8 +19,15 @@ export default function Introduction() {
         <div className={styles.container}>
             <h1 className={styles["title"]}>Frank Rojas</h1>
             <h3 className={styles["subtitle"]}>Software Engineer</h3>
-            <span className={styles["footer"]}> LinkedIn
-                {/* config list for links? - linkedin, github, instagram */}
+            <span className={styles["footer"]}>
+                {socials.map((link, index) => {
+                    return (
+                        <a key={index} className={styles["links"]} target="_blank" href={link.name !== "Email" ? link.url : "mailto:" + link.url} aria-label={link.name + " (Opens in a new tab)"}>
+                                <Icon name={link.name} />
+                        </a>
+                    )
+                })}
+
             </span>
             <div className={styles["scroller-container"]}>
                 {/* <div className={styles.scroller} style={{ transform: `translateY(-${index * 100}%)`}}>

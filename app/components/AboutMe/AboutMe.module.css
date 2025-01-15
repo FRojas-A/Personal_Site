@@ -9,18 +9,19 @@
 
 .container h1 {
     margin-bottom: 8px;
-    font-size: 48px;
 }
 
 .container h2 {
     margin-top: 24px;
     margin-bottom: 8px;
-    font-size: 36px;
 }
 
-.container p {
-    font-size: 1.25rem;
+.container a {
+    color: var(--tertiary);
+}
 
+.container a:hover {
+    color: var(--alternate)
 }
 
 .container ul {

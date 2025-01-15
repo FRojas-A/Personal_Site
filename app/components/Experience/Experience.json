@@ -1,0 +1,20 @@
+{
+    "jobs": [
+        {
+            "title": "Software Engineer",
+            "company": "General Motors",
+            "dateRange": ["2021-01-01T00:00:00", "2024-08-01T00:00:00"],
+            "description": "Enhanced eCommerce security by redesigning the authentication process, effectively resolving numerous issues and enhancing user experience. Developed a micro front-end order history application, working on the project from start to finish. Directed a mass API migration, ensuring continuous service without any interruptions. Developed various components for the eCommerce platform, consistently collaborating with diverse teams in 2-week Agile sprints to deliver projects on time.",
+            "skills": ["React.js", "Stencil.js", "Node.js", "Express.js", "JavaScript", "TypeScript"],
+            "urls": ["https://accessories.chevrolet.com", "https://parts.chevrolet.com"]
+        },
+        {
+            "title": "Lab Assistant",
+            "company": "University of Houston",
+            "dateRange": ["2017-08-01T00:00:00", "2021-05-01T00:00:00"],
+            "description": "Provided daily technical support and training to over 100s of users, ensuring seamless service and high user satisfaction. Managed software rollouts, updating more than 50 workstations. Trained and mentored new lab assistants in troubleshooting and software best practices.",
+            "skills": ["Troubleshooting", "Technical Support", "Documentation", "Network Management", "Hardware Maintenance"],
+            "urls": ["https://uh.edu"]
+        }
+    ]
+}

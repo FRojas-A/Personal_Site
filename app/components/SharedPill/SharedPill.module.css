@@ -1,0 +1,12 @@
+.container {
+    height: 32px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 20px;
+    color: var(--background);
+    background-color: var(--alternate);
+    font-size: small;
+}

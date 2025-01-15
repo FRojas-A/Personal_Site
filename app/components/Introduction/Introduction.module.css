@@ -49,5 +49,21 @@
 .footer {
     bottom: 4rem;
     position: absolute;
+    color: var(--secondary);
+    display: flex;
+    gap: 16px;
+}
 
+.links {
+    display: flex;
+    padding: 8px;
+}
+
+.links svg {
+    width: 36px;
+}
+
+.links:hover {
+    color: var(--tertiary);
+    cursor: pointer;
 }
