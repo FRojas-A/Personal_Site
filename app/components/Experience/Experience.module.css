@@ -37,9 +37,24 @@
 
 .info {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 1rem;
+}
+
+.link {
+    margin-bottom: 8px;
+}
+
+@media (min-width: 530px) {
+    .info {
+        flex-direction: row;
+    }
+
+    .link {
+        margin-bottom: 0;
+    }
 }
 
 .description {
