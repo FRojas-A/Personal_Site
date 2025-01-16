@@ -1,12 +1,23 @@
 import SectionWrapper from "@/app/wrappers/SectionWrapper";
 import styles from "./AboutMe.module.css";
 import { socials, otherLinks, Links } from "@/app/config";
-import { Fragment } from "react";
+import { Fragment, ReactElement } from "react";
 
 export default function AboutMe() {
   const instagram: Links = socials.find((link) => link.name === "Instagram")!;
   const etsy: Links = otherLinks.find((link) => link.name === "Etsy")!;
   const links: Links[] = socials.filter((link) => link.name !== "GitHub");
+  const formatLink = (link: Links): ReactElement => {
+    return (
+      <a
+        target="_blank"
+        href={link.name === "Email" ? "mailto:" + link.url : link.url}
+        aria-label={link.name + " (Opens in a new tab)"}
+      >
+        {link.name}
+      </a>
+    );
+  };
 
   return (
     <SectionWrapper name="about">
@@ -54,28 +65,9 @@ export default function AboutMe() {
               return (
                 <Fragment key={index}>
                   {links.length - 1 === index ? (
-                    <>
-                      or{" "}
-                      <a
-                        target="_blank"
-                        href={link.url}
-                        aria-label={link.name + " (Opens in a new tab)"}
-                      >
-                        {link.name}
-                      </a>
-                      !
-                    </>
+                    <>or {formatLink(link)}!</>
                   ) : (
-                    <>
-                      <a
-                        target="_blank"
-                        href={link.url}
-                        aria-label={link.name + " (Opens in a new tab)"}
-                      >
-                        {link.name}
-                      </a>
-                      ,{" "}
-                    </>
+                    <>{formatLink(link)}, </>
                   )}
                 </Fragment>
               );
