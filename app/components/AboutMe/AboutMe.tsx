@@ -6,7 +6,13 @@ import { Fragment, ReactElement } from "react";
 export default function AboutMe() {
   const instagram: Links = socials.find((link) => link.name === "Instagram")!;
   const etsy: Links = otherLinks.find((link) => link.name === "Etsy")!;
-  const links: Links[] = socials.filter((link) => link.name !== "GitHub");
+  const links: Links[] = socials
+    .sort((a, b) => {
+      if (a.name < b.name) return -1;
+      else if (a.name > b.name) return 1;
+      else return 0;
+    })
+    .filter((link) => link.name !== "GitHub");
   const formatLink = (link: Links): ReactElement => {
     return (
       <a
