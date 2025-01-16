@@ -1,0 +1,10 @@
+{
+  "projects": [
+    {
+      "name": "Personal Website   ",
+      "image": "",
+      "description": "This website! You'll learn a bit about me, my experiences, and projects! Built using Next.js, React.js, and TypeScript. Deployed using Vercel.",
+      "url": "https://frankrojas.com"
+    }
+  ]
+}

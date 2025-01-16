@@ -1,5 +1,5 @@
 import styles from "./Experience.module.css";
-import jobData from "./Experience.json";
+import { jobs } from "./Experience.json";
 import { formatDate } from "@/app/utils/utils";
 import { SharedPill } from "../SharedPill/SharedPill";
 import SectionWrapper from "@/app/wrappers/SectionWrapper";
@@ -14,7 +14,7 @@ export function Experience() {
     <SectionWrapper name="experience">
       <section id="experience" className={styles["experience"]}>
         <h1 className={styles["title"]}>Experience</h1>
-        {jobData.jobs.map((job, index) => {
+        {jobs.map((job, index) => {
           return (
             <div key={index} className={styles["job-container"]}>
               <div className={styles["info"]}>

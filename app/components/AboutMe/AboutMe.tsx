@@ -29,7 +29,7 @@ export default function AboutMe() {
 
   return (
     <SectionWrapper name="about">
-      <div className={styles.container} id="about">
+      <section className={styles.container} id="about">
         <h1>About Me</h1>
         <div className={styles["description"]}>
           <p>
@@ -82,7 +82,7 @@ export default function AboutMe() {
             })}
           </p>
         </div>
-      </div>
+      </section>
     </SectionWrapper>
   );
 }
