@@ -1,10 +1,11 @@
 import styles from "./Experience.module.css";
-import { jobs } from "./Experience.json";
+import jobData from "./Experience.json";
 import { formatDate } from "@/app/utils/utils";
 import { SharedPill } from "../SharedPill/SharedPill";
 import SectionWrapper from "@/app/wrappers/SectionWrapper";
 
-export function Experience() {
+export default function Experience() {
+  const { jobs } = jobData;
   const dateOptions = {
     month: "short",
     year: "numeric",

@@ -1,6 +1,8 @@
 import SectionWrapper from "@/app/wrappers/SectionWrapper";
 import styles from "./Projects.module.css";
-import { projects } from "./Projects.json";
+import projectData from "./Projects.json";
+
+const { projects } = projectData;
 
 export default function Projects() {
   return (
