@@ -1,10 +1,12 @@
 import SectionWrapper from "@/app/wrappers/SectionWrapper";
 import styles from "./AboutMe.module.css";
 import { socials, otherLinks, Links } from "@/app/config";
+import { Fragment } from "react";
 
 export default function AboutMe() {
   const instagram: Links = socials.find((link) => link.name === "Instagram")!;
   const etsy: Links = otherLinks.find((link) => link.name === "Etsy")!;
+  const links: Links[] = socials.filter((link) => link.name !== "GitHub");
 
   return (
     <SectionWrapper name="about">
@@ -47,7 +49,37 @@ export default function AboutMe() {
           <p>
             I'm always looking for new challenges and opportunities to grow both
             personally and professionally. If you'd like to connect, feel free
-            to reach out through email, LinkedIn, or Instagram!
+            to reach out through{" "}
+            {links.map((link, index) => {
+              return (
+                <Fragment key={index}>
+                  {links.length - 1 === index ? (
+                    <>
+                      or{" "}
+                      <a
+                        target="_blank"
+                        href={link.url}
+                        aria-label={link.name + " (Opens in a new tab)"}
+                      >
+                        {link.name}
+                      </a>
+                      !
+                    </>
+                  ) : (
+                    <>
+                      <a
+                        target="_blank"
+                        href={link.url}
+                        aria-label={link.name + " (Opens in a new tab)"}
+                      >
+                        {link.name}
+                      </a>
+                      ,{" "}
+                    </>
+                  )}
+                </Fragment>
+              );
+            })}
           </p>
         </div>
       </div>

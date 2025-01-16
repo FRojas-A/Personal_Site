@@ -3,7 +3,7 @@ import Link from "next/link";
 import nav from "./Navigation.module.css";
 import { scrollTo } from "@/app/utils/utils";
 import { usePathname } from "next/navigation";
-import { Fragment, useState, SVGProps } from "react";
+import { Fragment, useState, SVGProps, ReactElement } from "react";
 import { useScroll } from "@/app/contexts/ScrollContext";
 import SharedButton from "../SharedButton/SharedButton";
 
@@ -134,6 +134,19 @@ export default function Navigation() {
     );
   }
 
+  const navItems: ReactElement[] = [
+    <AboutMe />,
+    <Experience />,
+    <Projects />,
+    <ContactMe />,
+    <SharedButton
+      text="Résumé"
+      link="/pdfs/Frank_Rojas_Resume_2025.pdf"
+      size="sm"
+      download={"Frank_Rojas_Resume_2025"}
+    />,
+  ];
+
   function Exit(props: SVGProps<SVGSVGElement>) {
     return (
       <svg
@@ -198,16 +211,9 @@ export default function Navigation() {
     <Fragment>
       <nav className={nav["container"]}>
         <div className={nav["nav-items"]}>
-          <AboutMe />
-          <Experience />
-          <Projects />
-          <ContactMe />
-          <SharedButton
-            text="Résumé"
-            link="/pdfs/Frank_Rojas_Resume_2025.pdf"
-            size="sm"
-            download={"Frank_Rojas_Resume_2025"}
-          />
+          {navItems.map((item, index) => {
+            return <Fragment key={index}>{item}</Fragment>;
+          })}
         </div>
       </nav>
       <nav className={nav["mobile-container"]}>
@@ -225,21 +231,9 @@ export default function Navigation() {
         </span>
         <div className={isOpen ? `${nav["menu"]} ${nav.show} ` : nav["menu"]}>
           <ul>
-            <li>
-              <Home />
-            </li>
-            <li>
-              <Links />
-            </li>
-            <li>
-              <AboutMe />
-            </li>
-            <li>
-              <Projects />
-            </li>
-            <li>
-              <ContactMe />
-            </li>
+            {navItems.map((item, index) => {
+              return <li key={index}>{item}</li>;
+            })}
           </ul>
         </div>
       </nav>
