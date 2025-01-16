@@ -8,8 +8,10 @@ export default function AboutMe() {
   const etsy: Links = otherLinks.find((link) => link.name === "Etsy")!;
   const links: Links[] = socials
     .sort((a, b) => {
-      if (a.name < b.name) return -1;
-      else if (a.name > b.name) return 1;
+      const A = a.name.toLowerCase();
+      const B = b.name.toLowerCase();
+      if (A < B) return -1;
+      else if (A > B) return 1;
       else return 0;
     })
     .filter((link) => link.name !== "GitHub");
@@ -17,7 +19,7 @@ export default function AboutMe() {
     return (
       <a
         target="_blank"
-        href={link.name === "Email" ? "mailto:" + link.url : link.url}
+        href={link.name === "email" ? "mailto:" + link.url : link.url}
         aria-label={link.name + " (Opens in a new tab)"}
       >
         {link.name}

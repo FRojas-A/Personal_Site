@@ -1,7 +1,6 @@
 .container {
   scroll-margin-top: 80px;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .container h1 {
@@ -47,6 +46,5 @@
 @media (min-width: 1024px) {
   .container {
     min-height: fit-content;
-    padding-bottom: 6rem;
   }
 }

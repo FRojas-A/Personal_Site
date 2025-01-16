@@ -1,5 +1,6 @@
 .experience {
   scroll-margin-top: 80px;
+  margin-top: 4rem;
 }
 
 .job-container {
@@ -12,6 +13,9 @@
 }
 
 @media (min-width: 1024px) {
+  .experience {
+    margin-top: 6rem;
+  }
   .job-container {
     padding: 1.5rem;
   }

@@ -47,7 +47,7 @@ export default function Introduction() {
               key={index}
               className={styles["links"]}
               target="_blank"
-              href={link.name !== "Email" ? link.url : "mailto:" + link.url}
+              href={link.name !== "email" ? link.url : "mailto:" + link.url}
               aria-label={link.name + " (Opens in a new tab)"}
             >
               <Icon name={link.name} />

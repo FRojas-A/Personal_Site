@@ -5,6 +5,7 @@ import ContactMe from "./components/ContactMe/ContactMe";
 import { Fragment } from "react";
 import Introduction from "./components/Introduction/Introduction";
 import { Experience } from "./components/Experience/Experience";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   const disable = String(process.env.disable) === "false";
@@ -17,6 +18,7 @@ export default function Home() {
         <Experience />
         {disable && <Projects />}
         {disable && <ContactMe />}
+        <Footer />
       </section>
     </Fragment>
   );

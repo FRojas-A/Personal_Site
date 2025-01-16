@@ -13,7 +13,7 @@ const links = {
       url: "https://www.instagram.com/frojas.photos/",
     },
     {
-      name: "Email",
+      name: "email",
       url: "frankrojas215@gmail.com",
     },
   ],

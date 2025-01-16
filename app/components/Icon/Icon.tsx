@@ -9,16 +9,17 @@ type IconType = {
 };
 
 export default function Icon(icon: IconType) {
-  switch (icon.name) {
-    case "GitHub":
+  const name = icon.name.toLowerCase();
+  switch (name) {
+    case "github":
       return <GitHub />;
-    case "LinkedIn":
+    case "linkedin":
       return <LinkedIn />;
-    case "Instagram":
+    case "instagram":
       return <Instagram />;
-    case "Email":
+    case "email":
       return <Email />;
-    case "Download":
+    case "download":
       return <Download />;
     default:
       return <GitHub />;
