@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "./components/Navigation/Navigation";
 import { ScrollProvider } from "./contexts/ScrollContext";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,6 +43,7 @@ export default function RootLayout({
           <Navigation />
           <main className="main">{children}</main>
         </ScrollProvider>
+        <Analytics />
       </body>
     </html>
   );
