@@ -1,23 +1,15 @@
 :root {
   --alternate: #fcba04;
-  --background: #f2f4f8;
-  --foreground: #171d28;
+  --background: #171d28;
+  --primary: #212d40;
+  --secondary: #9ba9c5;
+  --tertiary: #d8dee9;
+
+  --foreground: #f2f4f8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --alternate: #fcba04;
-    --background: #171d28;
-    --primary: #212d40;
-    --secondary: #9ba9c5;
-    --tertiary: #d8dee9;
-
-    --foreground: #f2f4f8;
-  }
-
-  html {
-    color-scheme: dark;
-  }
+html {
+  color-scheme: dark;
 }
 
 html,
@@ -56,11 +48,13 @@ p {
 }
 
 .main {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
+  --gray-rgb: 255, 255, 255;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+  --button-primary-hover: #ccc;
+  --button-secondary-hover: #1a1a1a;
+  padding-left: 16px;
+  padding-right: 16px;
   min-height: calc(100svh - 160px);
   max-width: 1280px;
   margin: auto;
@@ -75,18 +69,6 @@ section {
 section h1 {
   font-size: 28px;
   padding-bottom: 12px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .main {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 
 @media (min-width: 1024px) {

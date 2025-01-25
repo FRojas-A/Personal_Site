@@ -4,20 +4,26 @@
   border-radius: 16px;
   transition:
     transform 0.05s ease,
-    background-color 0.05s ease;
+    background-color 0.05s ease,
+    opacity 0.05s ease;
 }
 
 @media (min-width: 1024px) {
   .experience {
     margin-top: 6rem;
   }
-  .job-container {
+  .jobs-list > div {
     padding: 1.5rem;
+    opacity: 1;
   }
 
   .job-container:hover {
     background-color: var(--primary);
     transform: scale(1.05);
+  }
+
+  .jobs-list:hover > div {
+    opacity: 0.6;
   }
 
   .job-container:hover .info .link span {
@@ -26,6 +32,10 @@
     top: 0;
     left: 0;
     position: absolute;
+  }
+
+  .jobs-list > div:hover {
+    opacity: 1;
   }
 }
 
