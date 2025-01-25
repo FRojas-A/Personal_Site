@@ -82,4 +82,8 @@ section h1 {
   #content {
     width: 60%;
   }
+
+  section:not(#about) {
+    margin-top: 6rem;
+  }
 }
