@@ -49,7 +49,7 @@ export default function AboutMe() {
             <a
               target="_blank"
               href={instagram.url}
-              aria-label={instagram.name + "(Opens in a new tab)"}
+              aria-label={instagram.name + " (Opens in a new tab)"}
             >
               bird watch
             </a>
@@ -58,7 +58,7 @@ export default function AboutMe() {
             <a
               target="_blank"
               href={etsy.url}
-              aria-label={etsy.name + "(Opens in a new tab)"}
+              aria-label={etsy.name + " (Opens in a new tab)"}
             >
               car parts
             </a>

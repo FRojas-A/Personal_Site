@@ -3,6 +3,27 @@
   flex-direction: column;
   align-items: center;
 }
+
+.container p {
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.form-container > span {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.message-failure {
+  color: #ff4e4e;
+}
+
+.message-success {
+  color: var(--alternate);
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -25,7 +46,7 @@
   top: 24px;
   left: 16px;
   color: var(--secondary);
-  transition: 0.3s all;
+  transition: 0.2s all;
 }
 
 .form-input {
@@ -44,6 +65,16 @@
   z-index: 1;
 }
 
+.form-field span {
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--alternate);
+  text-align: right;
+  font-style: italic;
+}
+
 .form-input:focus {
   border-color: var(--alternate);
   outline: 0;
@@ -56,10 +87,19 @@
   left: 0;
 }
 
-.form-input:valid + label::before {
+.not-empty + label::before {
   top: 0;
   left: 0;
   font-size: 16px;
+}
+
+.form-input:user-invalid {
+  border-color: #ff4e4e;
+}
+
+.form-input:user-invalid ~ span,
+.form-input:user-invalid ~ label::before {
+  color: #ff4e4e;
 }
 
 .submit-container {
