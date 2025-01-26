@@ -11,14 +11,23 @@ export default function ContactMe() {
     if (form && form instanceof HTMLFormElement) {
       const formData = new FormData(form);
 
-      const response = await fetch("/api/contact", {
-        method: "post",
-        body: formData,
-      });
-
-      console.log(response);
+      try {
+        const response = await fetch("/api/contact", {
+          method: "post",
+          body: formData,
+        });
+        // TODO: notification for successful and failed responses
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
+
+  const autoExpand = (event: FormEvent) => {
+    const textArea = event.target as HTMLTextAreaElement;
+    textArea.style.height = "auto";
+    textArea.style.height = textArea.scrollHeight + "px";
+  };
 
   return (
     <section className={styles.container} id="contact">
@@ -27,24 +36,40 @@ export default function ContactMe() {
         onSubmit={(e) => handleSubmit(e)}
         className={styles["form-container"]}
       >
-        <label htmlFor="name">Name</label>
-        <input name="name" id="name" className={styles["form-input"]} />
-        <label htmlFor="email">Email</label>
-        <input
-          required
-          name="email"
-          id="email"
-          className={styles["form-input"]}
-        />
-        <label htmlFor="message">Message</label>
-        <textarea
-          required
-          name="message"
-          id="email"
-          className={styles["form-input"]}
-          rows={7}
-        />
-        <button type="submit">Send</button>
+        <div className={styles["form-field"]}>
+          <input
+            required
+            name="name"
+            id="name"
+            className={styles["form-input"]}
+          />
+          <label htmlFor="name" title="Name"></label>
+        </div>
+        <div className={styles["form-field"]}>
+          <input
+            required
+            name="email"
+            id="email"
+            className={styles["form-input"]}
+          />
+          <label htmlFor="email" title="Email"></label>
+        </div>
+        <div className={styles["form-field"]}>
+          <textarea
+            onInput={(e) => autoExpand(e)}
+            required
+            name="message"
+            id="email"
+            className={styles["form-input"]}
+            rows={1}
+          />
+          <label htmlFor="message" title="Message"></label>
+        </div>
+        <div className={styles["submit-container"]}>
+          <button type="submit" className={styles["form-submit"]}>
+            Send
+          </button>
+        </div>
       </form>
     </section>
   );

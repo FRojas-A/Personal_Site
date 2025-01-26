@@ -5,7 +5,7 @@
   --secondary: #9ba9c5;
   --tertiary: #d8dee9;
 
-  --foreground: #f2f4f8;
+  --foreground: #f5f7f9;
 }
 
 html {
@@ -67,6 +67,7 @@ section {
 }
 
 section h1 {
+  width: 100%;
   font-size: 28px;
   padding-bottom: 12px;
 }
