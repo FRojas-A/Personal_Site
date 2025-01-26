@@ -1,3 +1,132 @@
 .container {
-  min-height: calc(100svh - 160px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container p {
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.form-container > span {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.message-failure {
+  color: var(--error);
+}
+
+.message-success {
+  color: var(--alternate);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 708px;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label::before {
+  font-size: 20px;
+  content: attr(title);
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  color: var(--secondary);
+  transition: 0.2s all;
+}
+
+.form-input {
+  max-width: 690px;
+  padding: 16px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  border: none;
+  border-bottom: 2px var(--secondary) solid;
+  color: var(--foreground);
+  background-color: transparent;
+  font-size: 16px;
+  font-family: var(--font-geist-mono);
+  overflow-y: hidden;
+  resize: none;
+  z-index: 1;
+}
+
+.form-field span {
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--alternate);
+  text-align: right;
+  font-style: italic;
+}
+
+.form-input:focus {
+  border-color: var(--alternate);
+  outline: 0;
+}
+
+.form-input:focus + label::before {
+  color: var(--alternate);
+  font-size: 16px;
+  top: 0;
+  left: 0;
+}
+
+.not-empty + label::before {
+  top: 0;
+  left: 0;
+  font-size: 16px;
+}
+
+.form-input:user-invalid {
+  border-color: var(--error);
+}
+
+.form-input:user-invalid ~ span,
+.form-input:user-invalid ~ label::before {
+  color: var(--error);
+}
+
+.submit-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  background-color: var(--alternate);
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  transition: transform 0.05s ease;
+}
+
+.form-submit:hover {
+  transform: scale(1.125);
+  cursor: pointer;
+}
+
+@media (min-width: 669px) {
+  .form-submit {
+    width: 192px;
+  }
 }

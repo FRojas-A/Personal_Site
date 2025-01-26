@@ -29,7 +29,7 @@ export default function AboutMe() {
 
   return (
     <SectionWrapper name="about">
-      <div className={styles.container} id="about">
+      <section className={styles.container} id="about">
         <h1>About Me</h1>
         <div className={styles["description"]}>
           <p>
@@ -49,7 +49,7 @@ export default function AboutMe() {
             <a
               target="_blank"
               href={instagram.url}
-              aria-label={instagram.name + "(Opens in a new tab)"}
+              aria-label={instagram.name + " (Opens in a new tab)"}
             >
               bird watch
             </a>
@@ -58,7 +58,7 @@ export default function AboutMe() {
             <a
               target="_blank"
               href={etsy.url}
-              aria-label={etsy.name + "(Opens in a new tab)"}
+              aria-label={etsy.name + " (Opens in a new tab)"}
             >
               car parts
             </a>
@@ -82,7 +82,7 @@ export default function AboutMe() {
             })}
           </p>
         </div>
-      </div>
+      </section>
     </SectionWrapper>
   );
 }

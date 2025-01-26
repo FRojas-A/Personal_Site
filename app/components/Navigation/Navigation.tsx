@@ -98,7 +98,7 @@ export default function Navigation() {
     return (
       <Link
         href="/"
-        className={`${nav.item} ${nav.disabled}`}
+        className={`${nav.item}`}
         onClick={(e) => {
           e.preventDefault();
           if (path === "/") {
@@ -118,7 +118,7 @@ export default function Navigation() {
     return (
       <Link
         href="/"
-        className={`${nav.item} ${nav.disabled}`}
+        className={`${nav.item}`}
         onClick={(e) => {
           e.preventDefault();
           if (path === "/") {
@@ -137,7 +137,7 @@ export default function Navigation() {
   const navItems: ReactElement[] = [
     <AboutMe />,
     <Experience />,
-    <Projects />,
+    // <Projects />,
     <ContactMe />,
     <SharedButton
       text="Résumé"
