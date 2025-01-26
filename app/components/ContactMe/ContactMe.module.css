@@ -17,7 +17,7 @@
 }
 
 .message-failure {
-  color: #ff4e4e;
+  color: var(--error);
 }
 
 .message-success {
@@ -94,12 +94,12 @@
 }
 
 .form-input:user-invalid {
-  border-color: #ff4e4e;
+  border-color: var(--error);
 }
 
 .form-input:user-invalid ~ span,
 .form-input:user-invalid ~ label::before {
-  color: #ff4e4e;
+  color: var(--error);
 }
 
 .submit-container {
