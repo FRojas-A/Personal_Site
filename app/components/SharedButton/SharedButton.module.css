@@ -3,12 +3,12 @@
   background-color: var(--alternate);
   color: var(--background);
   border-radius: 10px;
-  transition: transform 0.05s ease;
+  transition: transform 0.16s cubic-bezier(0.65, 0.61, 0.18, 1.8) 0.02s;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .container:hover {
-    transform: scale(1.125);
+    transform: scale(1.2);
   }
 }
 

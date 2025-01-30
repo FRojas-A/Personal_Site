@@ -117,7 +117,7 @@
   font-weight: bold;
   border-radius: 10px;
   border: none;
-  transition: transform 0.05s ease;
+  transition: transform 0.16s cubic-bezier(0.65, 0.61, 0.18, 1.8) 0.02s;
 }
 
 .form-submit:hover {
