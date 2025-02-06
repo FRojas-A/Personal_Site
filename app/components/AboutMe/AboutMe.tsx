@@ -53,7 +53,7 @@ export default function AboutMe() {
             >
               bird watch
             </a>
-            , boulder, play video games, and lounge around with my girlfriend, 2
+            , boulder, play video games, and spend time with my girlfriend, 2
             dogs, and cat! I also design and sell functional 3D printed{" "}
             <a
               target="_blank"
