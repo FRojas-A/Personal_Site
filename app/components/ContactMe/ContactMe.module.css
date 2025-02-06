@@ -56,6 +56,7 @@
   margin-bottom: 24px;
   border: none;
   border-bottom: 2px var(--secondary) solid;
+  border-radius: 0;
   color: var(--foreground);
   background-color: transparent;
   font-size: 16px;
@@ -117,7 +118,7 @@
   font-weight: bold;
   border-radius: 10px;
   border: none;
-  transition: transform 0.05s ease;
+  transition: transform 0.16s cubic-bezier(0.65, 0.61, 0.18, 1.8) 0.02s;
 }
 
 .form-submit:hover {
